@@ -1,4 +1,4 @@
-{
+﻿{
   "expo": {
     "name": "Sudoku Puzzle",
     "slug": "SudokuPuzzle",
@@ -32,6 +32,25 @@
       "eas": {
         "projectId": "54178c93-9b48-4c99-bdf9-e2e84944177b"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableProguardInReleaseBuilds": true,
+            "extraProguardRules": "-keep class expo.modules.** { *; }\n-keepclassmembers class expo.modules.** { *; }\n-keep class com.facebook.react.** { *; }\n-keepclassmembers class com.facebook.react.** { *; }\n-keep class com.facebook.hermes.** { *; }\n-keep class kotlin.** { *; }\n-keepattributes *Annotation*\n-keepattributes Signature\n-keepattributes InnerClasses,EnclosingMethod"
+          }
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
+        }
+      ],
+      ["expo-audio", {}]
+    ]
   }
 }
